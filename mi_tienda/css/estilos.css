@@ -1,0 +1,186 @@
+/* ── Estilos generales ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* ── Barra de navegación ── */
+nav {
+    background-color: #11074b;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.menu a:hover {
+    color: #f0a500;
+}
+
+.carrito {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* ── Contenido principal ── */
+main {
+    padding: 40px 30px;
+}
+
+/* ── Pie de página ── */
+footer {
+    background-color: #11074b;
+    color: white;
+    padding: 20px 30px 0px 30px;
+    margin-top: 20px;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-seccion h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #f0a500;
+}
+
+.footer-seccion ul {
+    list-style: none;
+}
+
+.footer-seccion ul li {
+    margin-bottom: 8px;
+}
+
+.footer-seccion ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-seccion ul li a:hover {
+    color: #f0a500;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+}/* ── Sección de productos ── */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 30px;
+    margin-bottom: 60px;
+}
+
+/* ── Tarjeta de producto ── */
+.tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #1a1a2e;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #11074b;
+    margin-bottom: 15px;
+}
+
+.boton-agregar {
+    background-color: #11074b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.boton-agregar:hover {
+    background-color: #f0a500;
+}
+/* ── Hero ── */
+.hero {
+    background-color: #11074b;
+    color: white;
+    text-align: center;
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f0a500;
+}
+
+.boton-hero {
+    background-color: #f0a500;
+    color: #11074b;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.boton-hero:hover {
+    background-color: white;
+}
