@@ -20,9 +20,19 @@
             <li><a href="#">Contacto</a></li>
         </ul>
 
-        <div class="carrito">
-            🛒 <span>0</span>
+             <div class="carrito" onclick="toggleCarrito()">
+                🛒  <span id="contador">0</span>
+
+                 <!-- Panel desplegable -->
+             <div class="carrito-panel" id="carrito-panel">
+            <h3>Mi Carrito</h3>
+            <ul id="carrito-lista"></ul>
+         <div class="carrito-total">
+            <strong>Total: <span id="carrito-total">$0</span></strong>
         </div>
+        <button class="boton-vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+    </div>
+</div>
     </nav>
 
     <!-- Contenido principal -->

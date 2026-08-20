@@ -41,64 +41,44 @@ nav {
     color: #f0a500;
 }
 
-.carrito {
+/* ── Hero ── */
+.hero {
+    background-color: #11074b;
     color: white;
+    text-align: center;
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
     font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f0a500;
+}
+
+.boton-hero {
+    background-color: #f0a500;
+    color: #11074b;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
     cursor: pointer;
 }
 
-/* ── Contenido principal ── */
-main {
-    padding: 40px 30px;
+.boton-hero:hover {
+    background-color: white;
 }
 
-/* ── Pie de página ── */
-footer {
-    background-color: #11074b;
-    color: white;
-    padding: 20px 30px 0px 30px;
-    margin-top: 20px;
-}
-
-.footer-contenido {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.footer-seccion h4 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: #f0a500;
-}
-
-.footer-seccion ul {
-    list-style: none;
-}
-
-.footer-seccion ul li {
-    margin-bottom: 8px;
-}
-
-.footer-seccion ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-seccion ul li a:hover {
-    color: #f0a500;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.2);
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.6);
-}/* ── Sección de productos ── */
+/* ── Sección de productos ── */
 .productos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -149,38 +129,155 @@ footer {
 .boton-agregar:hover {
     background-color: #f0a500;
 }
-/* ── Hero ── */
-.hero {
-    background-color: #11074b;
+
+/* ── Carrito desplegable ── */
+.carrito {
     color: white;
-    text-align: center;
-    padding: 80px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
 }
-.hero h2 {
-    font-size: 2.5rem;
+
+.carrito-panel {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    color: #333;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.carrito-panel h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #11074b;
+    border-bottom: 2px solid #11074b;
+    padding-bottom: 10px;
+}
+
+#carrito-lista {
+    list-style: none;
+    margin-bottom: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#carrito-lista li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-total {
+    text-align: right;
+    font-size: 1.1rem;
+    color: #11074b;
     margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 1.2rem;
+.boton-vaciar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.boton-vaciar:hover {
+    background-color: #b02a37;
+}
+
+/* ── Pie de página ── */
+footer {
+    background-color: #11074b;
+    color: white;
+    padding: 20px 30px 0px 30px;
+    margin-top: 20px;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
     margin-bottom: 30px;
+}
+
+.footer-seccion h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
     color: #f0a500;
 }
 
-.boton-hero {
-    background-color: #f0a500;
-    color: #11074b;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
+.footer-seccion ul {
+    list-style: none;
 }
 
-.boton-hero:hover {
-    background-color: white;
+.footer-seccion ul li {
+    margin-bottom: 8px;
+}
+
+.footer-seccion ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-seccion ul li a:hover {
+    color: #f0a500;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+}
+
+/* ── Responsive para celular ── */
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .productos {
+        grid-template-columns: 1fr !important;
+        padding: 20px 15px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .carrito-panel {
+        width: 250px;
+    }
 }
