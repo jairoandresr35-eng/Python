@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="logo">
+            <h1>Mi Tienda</h1>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="carrito" onclick="toggleCarrito()">
+            🛒 <span id="contador">0</span>
+            <div class="carrito-panel" id="carrito-panel">
+                <h3>Mi Carrito</h3>
+                <ul id="carrito-lista"></ul>
+                <div class="carrito-total">
+                    <strong>Total: <span id="carrito-total">$0</span></strong>
+                </div>
+                <button class="boton-vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detalle del producto -->
+    <section class="detalle">
+
+        <a href="index.html" class="boton-volver">← Volver</a>
+
+        <div class="detalle-contenido">
+
+            <div class="detalle-imagen">
+                <img src="https://via.placeholder.com/400" alt="Producto" id="detalle-img">
+            </div>
+
+            <div class="detalle-info">
+                <h2 id="detalle-nombre">Producto 1</h2>
+                <p class="detalle-precio" id="detalle-precio">$25.000</p>
+                <p class="detalle-descripcion">
+                    Descripción completa del producto. Aquí puedes agregar todos los detalles
+                    importantes como materiales, dimensiones, colores disponibles y cualquier
+                    otra característica relevante para el comprador.
+                </p>
+                <ul class="detalle-caracteristicas">
+                    <li>✅ Característica 1</li>
+                    <li>✅ Característica 2</li>
+                    <li>✅ Característica 3</li>
+                </ul>
+                <button class="boton-agregar" id="boton-detalle">Agregar al carrito</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-seccion">
+                <h4>Mi Tienda</h4>
+                <p>Los mejores productos al mejor precio.</p>
+            </div>
+            <div class="footer-seccion">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-seccion">
+                <h4>Contacto</h4>
+                <p>📧 info@mitienda.com</p>
+                <p>📱 +57 300 000 0000</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Mi Tienda — Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/funciones.js"></script>
+    <script src="js/detalle.js"></script>
+</body>
+</html>

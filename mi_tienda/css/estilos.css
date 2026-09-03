@@ -280,3 +280,79 @@ footer {
     .carrito-panel {
         width: 250px;
     }
+/* ── Página de detalle ── */
+.detalle {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.boton-volver {
+    display: inline-block;
+    color: #11074b;
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.boton-volver:hover {
+    color: #f0a500;
+}
+
+.detalle-contenido {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.detalle-imagen {
+    flex: 1;
+}
+
+.detalle-imagen img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.detalle-info {
+    flex: 1;
+}
+
+.detalle-info h2 {
+    font-size: 2rem;
+    color: #11074b;
+    margin-bottom: 10px;
+}
+
+.detalle-precio {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f0a500;
+    margin-bottom: 20px;
+}
+
+.detalle-descripcion {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.detalle-caracteristicas {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.detalle-caracteristicas li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+/* ── Responsive detalle ── */
+@media screen and (max-width: 768px) {
+    .detalle-contenido {
+        flex-direction: column !important;
+    }
+}
